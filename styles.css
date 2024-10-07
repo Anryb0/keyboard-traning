@@ -54,6 +54,11 @@ h1 {
     border-radius: 5px;
     text-shadow: 1px 1px 2px black;
 }
+
+#spisok {
+    position: absolute;
+    top: 80%
+}
 .timer {
     position: absolute;
     top: 10%;
