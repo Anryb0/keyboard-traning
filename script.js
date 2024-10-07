@@ -2,7 +2,8 @@
 listKeys = ["A", "S", "D", "F", "G"];
 let currentKey = ""; // Переменная для текущей падающей клавиши
 let score = 0; // Переменная для хранения очков игрока
-let timer = 5; // Время, отведенное на каждую клавишу
+let timer = 5;
+let lose = false;// Время, отведенное на каждую клавишу
 let intervalId; // Идентификатор интервала для управления таймером
 // Получаем элементы из HTML
 const fallingKeyElement = document.getElementById("fallingKey");
@@ -35,9 +36,10 @@ function startGame() {
   if (listKeys.length === 0) {
     text.innerText = "Игра окончена! Ваши очки: " + score;
     text.style.display = "block";
+    lose = true;
     return; // Завершаем игру, если клавиши закончились
   }
-  
+
   // Выбираем случайную клавишу из списка
   currentKey = listKeys[Math.floor(Math.random() * listKeys.length)];
   fallingKeyElement.textContent = currentKey; // Отображаем клавишу
@@ -78,19 +80,22 @@ function startGame() {
 
 // Обработчик события нажатия клавиши на клавиатуре
 function OnKeyDown(event) {
-  // Проверяем, совпадает ли нажатая клавиша с текущей падающей клавишей
-  if (event.key.toUpperCase() === currentKey) {
-    score += timer; // Добавляем оставшееся время к очкам
-    scoreElement.textContent = score; // Обновляем отображение очков
-    delkey = document.getElementById(currentKey);
-    delkey.style.display = "none";
-    // Убираем нажатую клавишу из списка, чтобы она больше не появлялась
-    listKeys.splice(listKeys.indexOf(currentKey), 1);
+  if (lose != true) {
+    // Проверяем, совпадает ли нажатая клавиша с текущей падающей клавишей
+    if (event.key.toUpperCase() === currentKey) {
+      score += timer; // Добавляем оставшееся время к очкам
+      scoreElement.textContent = score; // Обновляем отображение очков
+      delkey = document.getElementById(currentKey);
+      delkey.style.display = "none";
+      // Убираем нажатую клавишу из списка, чтобы она больше не появлялась
+      listKeys.splice(listKeys.indexOf(currentKey), 1);
 
-    clearInterval(intervalId); // Останавливаем текущий интервал
-    startGame(); // Запускаем новую игру с новой клавишей
+      clearInterval(intervalId); // Останавливаем текущий интервал
+      startGame(); // Запускаем новую игру с новой клавишей
+    }
   }
 }
 document.addEventListener("keydown", OnKeyDown);
+
 
 
