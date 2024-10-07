@@ -7,10 +7,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <h1>Keyboard traning</h1>
+    <div class="score">Очки: <span id="score">0</span></div>
+    <div class="timer">Осталось времени: <span id="timer">5</span> сек</div>
+    <p id="information"></p>
+    <button onclick="startGame()" class="button">Начать игру</button>
     <div class="game-container">
         <div class="falling-key" id="fallingKey"></div>
-        <div class="score">Очки: <span id="score">0</span></div>
-        <div class="timer">Осталось времени: <span id="timer">5</span> сек</div>
     </div>
     <script src="script.js"></script>
 </body>

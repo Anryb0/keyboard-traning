@@ -7,7 +7,10 @@ body {
     background-color: #f0f0f0;
 }
 
-
+h1 {
+ position: absolute;
+ top: 10px;
+}
 .game-container {
     position: relative;
     width: 300px;
@@ -15,28 +18,43 @@ body {
     border: 5px solid black;
     overflow: hidden;
 }
-
-
+.button{
+    position: absolute;
+    top: 14%
+}
 .falling-key {
     position: absolute;
     width: 50px;
     height: 50px;
-    background-color: red;
+    background-color: rgb(145, 255, 0);
+    border: 2px solid black;
+    border-radius: 5px;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 
 .score, .timer {
     position: absolute;
-    top: 10px;
+    top: 8%;
     color: black;
 }
 
-
+#information {
+    display: none;
+    position: absolute;
+    top: 17%;
+    padding: 5px;
+    background-color: red;
+    color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-shadow: 1px 1px 2px black;
+}
 .timer {
-    top: 40px;
+    position: absolute;
+    top: 10%;
 }
