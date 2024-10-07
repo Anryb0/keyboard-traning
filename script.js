@@ -27,6 +27,7 @@ function KnopkaStart() {
   document.getElementById("D").style.display = "inline";
   document.getElementById("F").style.display = "inline";
   document.getElementById("G").style.display = "inline";
+  lose = false;
   startGame();
 }
 
