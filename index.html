@@ -1,21 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Клавиатурный тренажер. Разработчик: Алев Борис&copy;</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Anryb0 corp.</title>
+    <link rel="shortcut icon" href="icon.png">
+    <style>
+          body {
+            background: rgb(46,46,46);
+            background: linear-gradient(90deg, rgba(46,46,46,1) 0%, rgba(0,0,0,1) 50%, rgba(46,46,46,1) 100%);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+        }
+        a {
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: green;
+            color: white;
+            font-weight: bold;
+            margin: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 32px;
+        }
+        a:hover {
+            background-color: black;
+        }
+        h1 {
+            position: sticky;
+            margin-bottom: 10px;
+            margin-top: 30px;
+        }
+        header, footer, nav {
+            text-align: center;
+        }
+        p {
+            font-weight: bold;
+            font-size: 32px;
+        }
+        img {
+            margin-top: 30px;
+        }
+</style>
 </head>
 <body>
-    <h1>Keyboard traning</h1>
-    <div class="score">Очки: <span id="score">0</span></div>
-    <div class="timer">Осталось времени: <span id="timer">5</span> сек</div>
-    <p id="information"></p>
-    <button onclick="startGame()" class="button">Начать игру</button>
-    <div class="game-container">
-        <div class="falling-key" id="fallingKey"></div>
-    </div>
-    <p id="spisok">Список кнопок: </p>
-    <script src="script.js"></script>
+    <header>
+        <h1>start page</h1>
+    </header>
+    <hr>
+    <main>
+        <p>Попробуйте новую игру - Keyboard training.</p>
+        <a href="game.html">Играть</a>
+        <br>
+        <img src="img1.jpg"alt="фото игры">
+    </main>
+    <hr>
+    <footer>2024 Game Developers</footer>
 </body>
 </html>
